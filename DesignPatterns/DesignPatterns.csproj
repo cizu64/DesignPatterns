@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{880B9B4C-7996-40C0-8CB3-A4CBE1F3A50D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MediatR, Version=12.0.0.0, Culture=neutral, PublicKeyToken=bb9a41a5e8aaa7e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\.nuget\packages\mediatr\10.0.1\lib\netstandard2.1\MediatR.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR.Contracts">
+      <HintPath>..\..\..\..\.nuget\packages\mediatr.contracts\2.0.1\lib\netstandard2.0\MediatR.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR.Extensions.Microsoft.DependencyInjection">
+      <HintPath>..\..\..\..\.nuget\packages\mediatr.extensions.microsoft.dependencyinjection\10.0.1\lib\netstandard2.1\MediatR.Extensions.Microsoft.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\Creator\Logistics.cs" />
+    <Compile Include="AbstractFactory\Product\Air\IAir.cs" />
+    <Compile Include="AbstractFactory\Product\Air\Plane.cs" />
+    <Compile Include="AbstractFactory\Product\Air\Drone.cs" />
+    <Compile Include="AbstractFactory\Product\Land\ILand.cs" />
+    <Compile Include="AbstractFactory\Product\Land\Truck.cs" />
+    <Compile Include="AbstractFactory\Product\Land\Train.cs" />
+    <Compile Include="Adapter\JsonConverter.cs" />
+    <Compile Include="Adapter\XmlConverter.cs" />
+    <Compile Include="Adapter\ManufacturerDataProvider.cs" />
+    <Compile Include="Adapter\Manufacturer.cs" />
+    <Compile Include="Bridge\Device.cs" />
+    <Compile Include="Bridge\Color.cs" />
+    <Compile Include="Bridge\IMobile.cs" />
+    <Compile Include="Bridge\Redmi.cs" />
+    <Compile Include="Bridge\Samsung.cs" />
+    <Compile Include="Builder\ConcreteAutomobile.cs" />
+    <Compile Include="Builder\Honda.cs" />
+    <Compile Include="Builder\IAutomobile.cs" />
+    <Compile Include="Builder\Toyota.cs" />
+    <Compile Include="Commands\CompleteRegistration.cs" />
+    <Compile Include="Commands\CreateCustomer.cs" />
+    <Compile Include="Commands\Customer.cs" />
+    <Compile Include="Commands\ICustomer.cs" />
+    <Compile Include="Commands\Invoker.cs" />
+    <Compile Include="Decorator\AdvertDecorator.cs" />
+    <Compile Include="Decorator\BBC.cs" />
+    <Compile Include="Decorator\CNN.cs" />
+    <Compile Include="Decorator\DefaultChannel.cs" />
+    <Compile Include="Decorator\IAdvert.cs" />
+    <Compile Include="Facade\CalculateFacade.cs" />
+    <Compile Include="Facade\Math.cs" />
+    <Compile Include="Factory\Creator\Samsung.cs" />
+    <Compile Include="Factory\Product\ISamsung.cs" />
+    <Compile Include="Factory\Product\Samsung\S22Ultra.cs" />
+    <Compile Include="Factory\Product\Samsung\A72.cs" />
+    <Compile Include="Iterator\Customer.cs" />
+    <Compile Include="Iterator\CustomerCollection.cs" />
+    <Compile Include="Iterator\Iterator.cs" />
+    <Compile Include="Mediator\Colleagues\Log.cs" />
+    <Compile Include="Mediator\Colleagues\Category.cs" />
+    <Compile Include="Mediator\Cordinator.cs" />
+    <Compile Include="Mediator\IMediator.cs" />
+    <Compile Include="Observable\IStore.cs" />
+    <Compile Include="Observable\Publisher\StoreManager.cs" />
+    <Compile Include="Observable\Subscribers\MacBook14Pro.cs" />
+    <Compile Include="Observable\Subscribers\Samsung_S22_Ultra.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Adapter\XmlToJsonAdapter.cs" />
+    <Compile Include="Prototype\Profile.cs" />
+    <Compile Include="Proxy\Cart.cs" />
+    <Compile Include="Proxy\CartManager.cs" />
+    <Compile Include="Proxy\DiscountProxy.cs" />
+    <Compile Include="Proxy\ICart.cs" />
+    <Compile Include="Proxy\Product.cs" />
+    <Compile Include="Singleton\Log.cs" />
+    <Compile Include="Strategy\BasicProfile.cs" />
+    <Compile Include="Strategy\IProfile.cs" />
+    <Compile Include="Strategy\JobProfile.cs" />
+    <Compile Include="Strategy\UserProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Builder\Samsung\" />
+    <Folder Include="Observer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BestPatterns.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

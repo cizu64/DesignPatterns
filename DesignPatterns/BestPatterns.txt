@@ -1,0 +1,12 @@
+﻿1. Factory Design Pattern - Creational
+2. Singleton Design Pattern - Creational
+3. Facade - Structural
+4. Mediator - Behavioural
+5. Proxy - Structural
+6. Adapter design pattern - Structural
+7. Observer - Behavioural
+8. Strategy - Behavioural
+9. Builder Design Pattern - Creational
+10. Command - Behavioural
+11. Decorator - Structural
+12. Iterator - Behavioural
