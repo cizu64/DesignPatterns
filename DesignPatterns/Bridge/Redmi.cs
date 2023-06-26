@@ -1,7 +1,7 @@
 ﻿namespace DesignPatterns.Bridge
 {
     /// <summary>
-    /// Concret implementation
+    /// Concrete implementation
     /// </summary>
     public class Redmi : IMobile
     {

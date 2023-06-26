@@ -1,35 +1,60 @@
-﻿using DesignPatterns.AbstractFactory.Product.Air;
+﻿//using DesignPatterns.AbstractFactory.Product.Air;
+//using DesignPatterns.AbstractFactory.Product.Land;
+//using DesignPatterns.Bridge;
+//using DesignPatterns.Builder;
+//using DesignPatterns.Commands;
+//using DesignPatterns.Decorator;
+//using DesignPatterns.Facade;
+//using DesignPatterns.Factory;
+//using DesignPatterns.Factory.Creator;
+//using DesignPatterns.Factory.Product;
+//using DesignPatterns.Factory.Product.Samsung;
+//using DesignPatterns.Iterator;
+//using DesignPatterns.Mediator;
+//using DesignPatterns.Mediator.Components;
+//using DesignPatterns.Observable.Publisher;
+//using DesignPatterns.Observable.Subscribers;
+//using DesignPatterns.Prototype;
+//using DesignPatterns.Proxy;
+using DesignPatterns.AbstractFactory.Creator;
+using DesignPatterns.AbstractFactory.Product.Air;
 using DesignPatterns.AbstractFactory.Product.Land;
 using DesignPatterns.Bridge;
 using DesignPatterns.Builder;
 using DesignPatterns.Commands;
 using DesignPatterns.Decorator;
 using DesignPatterns.Facade;
-using DesignPatterns.Factory;
 using DesignPatterns.Factory.Creator;
 using DesignPatterns.Factory.Product;
 using DesignPatterns.Factory.Product.Samsung;
+using DesignPatterns.Factory.Product.Soccer;
 using DesignPatterns.Iterator;
 using DesignPatterns.Mediator;
-using DesignPatterns.Mediator.Components;
+using DesignPatterns.Mediator.Colleagues;
 using DesignPatterns.Observable.Publisher;
 using DesignPatterns.Observable.Subscribers;
 using DesignPatterns.Prototype;
 using DesignPatterns.Proxy;
 using DesignPatterns.Singleton;
 using DesignPatterns.Strategy;
-using MediatR;
 using Newtonsoft.Json;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+//using DesignPatterns.Strategy;
+//using MediatR;
+//using Newtonsoft.Json;
+//using System;
+//using System.Collections;
+//using System.Collections.Generic;
+//using System.Diagnostics.CodeAnalysis;
+//using System.IO;
+//using System.Linq;
+//using System.Linq.Expressions;
+//using System.Security.Cryptography;
+//using System.Text;
+//using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
@@ -37,8 +62,21 @@ namespace DesignPatterns
     {  
         static void Main(string[] args)
         {
-           
-            
+            //observable
+            //we want to notify a customer that the new macbook pro 14 is available
+             StoreManager store = new StoreManager(); //the publisher
+
+            MacBook14Pro mac = new MacBook14Pro(); //concrete subscriber
+            Observable.Subscribers.Samsung_S22_Ultra samsung = new Observable.Subscribers.Samsung_S22_Ultra();
+
+            store.Subscribe(mac); //the customer subscribe to receive notification from the store for mac book products
+            store.Subscribe(samsung);
+
+            store.UnSubscribe(mac);
+
+            store.NotifySubscribers(new[] { mac.ToString(), samsung.ToString()}); //the store notifies the subscribers of the new products 
+
+
         }
     }
 }

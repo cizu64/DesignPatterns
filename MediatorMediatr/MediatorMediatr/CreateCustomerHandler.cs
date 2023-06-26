@@ -16,6 +16,5 @@ namespace MediatorMediatr.MediatorMediatr
             string result = JsonConvert.SerializeObject(notification);
             Console.WriteLine(result);
         }
-
     }
 }

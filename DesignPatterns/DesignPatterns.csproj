@@ -76,6 +76,11 @@
     <Compile Include="Builder\ConcreteAutomobile.cs" />
     <Compile Include="Builder\Honda.cs" />
     <Compile Include="Builder\IAutomobile.cs" />
+    <Compile Include="Builder\Samsung\Enums\SIM.cs" />
+    <Compile Include="Builder\Samsung\Enums\USB.cs" />
+    <Compile Include="Builder\Samsung\ISamsung.cs" />
+    <Compile Include="Builder\Samsung\Mobile\S22Ultra.cs" />
+    <Compile Include="Builder\Samsung\Mobile\A72.cs" />
     <Compile Include="Builder\Toyota.cs" />
     <Compile Include="Commands\CompleteRegistration.cs" />
     <Compile Include="Commands\CreateCustomer.cs" />
@@ -89,10 +94,16 @@
     <Compile Include="Decorator\IAdvert.cs" />
     <Compile Include="Facade\CalculateFacade.cs" />
     <Compile Include="Facade\Math.cs" />
+    <Compile Include="Factory\Creator\Soccer.cs" />
     <Compile Include="Factory\Creator\Samsung.cs" />
     <Compile Include="Factory\Product\ISamsung.cs" />
+    <Compile Include="Factory\Product\ISoccer.cs" />
     <Compile Include="Factory\Product\Samsung\S22Ultra.cs" />
     <Compile Include="Factory\Product\Samsung\A72.cs" />
+    <Compile Include="Factory\Product\Soccer\BTS.cs" />
+    <Compile Include="Factory\Product\Soccer\HW.cs" />
+    <Compile Include="Factory\Product\Soccer\Draw.cs" />
+    <Compile Include="Factory\Product\Soccer\AW.cs" />
     <Compile Include="Iterator\Customer.cs" />
     <Compile Include="Iterator\CustomerCollection.cs" />
     <Compile Include="Iterator\Iterator.cs" />
@@ -107,7 +118,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Adapter\XmlToJsonAdapter.cs" />
-    <Compile Include="Prototype\Profile.cs" />
+    <Compile Include="Prototype\Calculator.cs" />
     <Compile Include="Proxy\Cart.cs" />
     <Compile Include="Proxy\CartManager.cs" />
     <Compile Include="Proxy\DiscountProxy.cs" />
@@ -124,7 +135,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Builder\Samsung\" />
     <Folder Include="Observer\" />
   </ItemGroup>
   <ItemGroup>

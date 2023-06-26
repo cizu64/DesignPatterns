@@ -12,5 +12,6 @@ var serviceCollection = new ServiceCollection();
 var provider = serviceCollection.AddMediatR(m => { m.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()); }).BuildServiceProvider();
 
 var mediatr = provider.GetRequiredService<IMediator>();
+
 await mediatr.Publish(customer);
 await mediatr.Publish(customer2);
