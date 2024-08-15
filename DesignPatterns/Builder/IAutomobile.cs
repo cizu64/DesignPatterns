@@ -1,8 +1,10 @@
 ﻿namespace DesignPatterns.Builder
 {
-    public interface IAutomobile
+    public interface IProfileBuilder
     {
-        string BuildHonda(Honda honda);
-        string BuildToyota(Toyota toyota);
+        IProfileBuilder SetFullname(string fullname);
+        IProfileBuilder SetAge(int age);
+        IProfileBuilder SetGender(string gender);
+        Profile Build();
     }
 }
